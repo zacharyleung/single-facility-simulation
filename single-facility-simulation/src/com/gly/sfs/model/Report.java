@@ -3,13 +3,14 @@ package com.gly.sfs.model;
 import java.util.Arrays;
 
 public class Report {
+	/** The period when the report is written. */
     private int period;
     /** The inventory level at the beginning of the period. */
     private int inventory;
     /** pastDemand[k] = demand during period "period" - 1 - k. */
     private int[] pastDemand;
 
-    private int receivedPeriod = NOT_SET;
+    private int arrivalPeriod = NOT_SET;
     
     private static int NOT_SET = Integer.MIN_VALUE;
     
@@ -20,7 +21,11 @@ public class Report {
     }
 
     public void setArrivalPeriod(int t) {
-    	receivedPeriod = t;
+    	arrivalPeriod = t;
+    }
+    
+    public int getArrivalPeriod() {
+    	return arrivalPeriod;
     }
     
     public static class Builder {

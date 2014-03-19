@@ -9,6 +9,20 @@ class Shipment {
 		this.arrivalPeriod = builder.arrivalPeriod;
 	}
 	
+	int getArrivalPeriod() {
+		return arrivalPeriod;
+	}
+	
+	int getQuantity() {
+		return quantity;
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("Shipment{arrival period = %d, quantity = %d}",
+				arrivalPeriod, quantity);
+	}
+	
 	static class Builder {
 		private int quantity;
 		private int arrivalPeriod;
