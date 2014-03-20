@@ -21,6 +21,7 @@ public class Simulator {
 		
 		facility = new Facility(startPeriod, endPeriod);
 		for (int t = startPeriod; t < endPeriod; ++t) {
+			// log the beginning of period inventory level
 			facility.beginningOfPeriod(t);
 			
 			// submit a report if the facility is scheduled to 

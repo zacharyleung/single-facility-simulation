@@ -24,7 +24,7 @@ public class BasicTest {
 		
 		Simulator.Parameters parameters = new Simulator.Parameters.Builder()
 		.withStartPeriod(0)
-		.withEndPeriod(10)
+		.withEndPeriod(20)
 		.build();
 		simulator.runSimulation(parameters);
 	}
